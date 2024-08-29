@@ -1,10 +1,15 @@
-// Import our custom CSS
+// Bootstrap scss
 import '../scss/bootstrap.scss';
-// import '../assets/fonts/fontawesome-free/scss/font-awesome.scss';
+
+// FontAwesome scss
 import '../assets/fonts/fontawesome-free/scss/font-awesome.scss';
 
+// Lightbox2
+import 'lightbox2/dist/js/lightbox.min.js'
+import 'lightbox2/dist/css/lightbox.min.css';
+
+// Custom Styles
 import '../scss/styles.scss';
 
-// Import all of Bootstrap's JavaScript
-
+// Custom JavaScript
 import './typing-effect';
