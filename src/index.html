@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        name="viewport">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
     rel="stylesheet"
@@ -13,9 +13,9 @@
     href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Poppins:wght@300;400;600;700&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="lightbox2/dist/css/lightbox.min.css">
+  <link href="lightbox2/dist/css/lightbox.min.css" rel="stylesheet">
   <script defer src="lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
-  <script type="module" src="./js/main.js"></script>
+  <script src="./js/main.js" type="module"></script>
   <title>Bootstrap 5 w/ Vite</title>
 </head>
 <body>
@@ -25,14 +25,14 @@
     <h5 class="text-primary fs-3 fw-bold text-uppercase">
       Hello World!
     </h5>
-    <h1 id="typing-text" class="display-1 fw-bold text-white">
+    <h1 class="display-1 fw-bold text-white" id="typing-text">
       I am John Doe.
     </h1>
     <p class="roles text-white text-uppercase fs-4">
       <span>Full Stack Web Developer | </span>
       <span>Online Educator</span>
     </p>
-    <a href="#about" class="btn btn-outline-light btn-lg mt-3">
+    <a class="btn btn-outline-light btn-lg mt-3" href="#about">
       <span class="d-flex">
         <span class="me-3">
           <i class="fas fa-chevron-down"></i>
@@ -65,5 +65,108 @@
     </div>
   </div>
 </header>
+
+<!-- About -->
+<section class="about bg-light py-5" id="about">
+  <div class="container">
+    <div class="text-center">
+      <h4 class="text-uppercase fw-bold text-primary">About Me</h4>
+      <hr class="w-24 mx-auto">
+      <h2 class="mb-4">Let me introduce myself.</h2>
+    </div>
+    <div class="about-content d-flex gap-5 align-items-center h-100">
+      <img alt="Brad Traversy's profile image" class="about-img img-fluid rounded-circle" src="assets/images/brad.jpg">
+      <p class="lead">
+        I am a full stack web developer from Boston MA. I started writing code ab deleniti dicta distinctio dolor
+        dolores, dolorum ea fuga impedit inventore iste labore laborum laudantium maxime natus nobis nostrum
+        perspiciatis placeat porro quae recusandae repellat saepe sed soluta suscipit vero. Fugit, nihil.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Profile & Skills -->
+<section class="profile my-6">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h3 class="text-uppercase fw-bold">Profile</h3>
+        <p>
+          Here is some more info about myself to help you get to know me better.
+        </p>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item mb-3">
+            <h5 class="text-transform">
+              <i class="fas fa-user text-primary"></i> Full Name:
+            </h5>
+            <p>John Doe</p>
+          </li>
+          <li class="list-group-item mb-3">
+            <h5 class="text-transform">
+              <i class="fas fa-calendar text-primary"></i> Birth Date:
+            </h5>
+            <p>August 10, 2000</p>
+          </li>
+          <li class="list-group-item mb-3">
+            <h5 class="text-transform">
+              <i class="fas fa-building text-primary"></i> Current Position:
+            </h5>
+            <p>Owner at John Doe Media</p>
+          </li>
+          <li class="list-group-item mb-3">
+            <h5 class="text-transform">
+              <i class="fas fa-home text-primary"></i> Website:
+            </h5>
+            <p>www.google.com</p>
+          </li>
+          <li class="list-group-item mb-3">
+            <h5 class="text-transform">
+              <i class="fas fa-envelope text-primary"></i> Email:
+            </h5>
+            <p>test@example.com</p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h3 class="text-uppercase fw-bold">Skills</h3>
+          <p>Here is a list of my skills with these dumb percentages that don't mean anything.</p>
+        <h5><i class="fas fa-check"></i> HTML 5</h5>
+        <div class="progress mb-4" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar" style="width: 100%">100%</div>
+        </div>
+        <h5><i class="fas fa-check"></i> CSS 3</h5>
+        <div class="progress mb-4" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar" style="width: 60%">60%</div>
+        </div>
+        <h5><i class="fas fa-check"></i> JavaScript/TypeScript</h5>
+        <div class="progress mb-4" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar" style="width: 75%">75%</div>
+        </div>
+        <h5><i class="fas fa-check"></i> Bootstrap 5</h5>
+        <div class="progress mb-4" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar" style="width: 45%">45%</div>
+        </div>
+        <h5><i class="fas fa-check"></i> Angular</h5>
+        <div class="progress mb-4" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar" style="width: 85%">85%</div>
+        </div>
+        <h5><i class="fas fa-check"></i> Java</h5>
+        <div class="progress mb-4" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar" style="width: 50%">50%</div>
+        </div>
+        <h5><i class="fas fa-check"></i> Spring Boot</h5>
+        <div class="progress mb-4" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar" style="width: 65%">65%</div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5 text-center">
+      <div class="col-12">
+        <a href="#" class="btn btn-outline-dark btn-lg text-uppercase px-5 mx-3 my-2">Hire Me Now</a>
+        <a href="#" class="btn btn-dark btn-lg text-uppercase px-5 mx-3 my-2">Download CV</a>
+      </div>
+    </div>
+  </div>
+</section>
 </body>
 </html>
