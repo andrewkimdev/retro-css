@@ -54,6 +54,12 @@
   z-index: 10;
 }
 
+form input::placeholder,
+form textarea::placeholder {
+  color: #fff !important;
+  opacity: .7 !important;
+}
+
 @media(max-width: 767px) {
   .header .social i {
     font-size: 30px;
