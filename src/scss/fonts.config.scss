@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'DOSGothic';
+  src: url('../assets/fonts/retro-hangul/ttf/DOSGothic.ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DOSMyungjo';
+  src: url('../assets/fonts/retro-hangul/ttf/DOSMyungjo.ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DOSPilgi';
+  src: url('../assets/fonts/retro-hangul/ttf/DOSPilgi.ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  font-family: 'DOSGothic', sans-serif;
+}
