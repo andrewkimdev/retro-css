@@ -1,0 +1,29 @@
+:root {
+  --gray: #505750;
+  --blue: #5057FF;
+  --cyan: #50FFFF;
+  --white: #FFF;
+  --black: #000;
+  --red: #FF5750;
+  --font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--gray);
+}
+
+h1, h2, h3, h4, h5, h6, p, li {
+  color: var(--white);
+  font-size: var(--font-size);
+  font-weight: normal;
+}
+
+li {
+  list-style: none;
+}

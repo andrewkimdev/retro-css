@@ -1,24 +1,35 @@
-* {
-  margin: 0;
-  padding: 0;
+.screen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black);
 }
 
-body {
-  background-color: #505750;
+.container {
+  max-width: 80ch;
+  margin: 2ch auto;
+  flex-grow: 1;
+}
+
+.main {
+  height: 45ch;
+  background: var(--gray);
 }
 
 .header {
-  padding: 5px;
   background-color: #fff;
 }
 
-.nav-header {
+.system-nav-header {
   background-color: #fff;
   display: flex;
   justify-content: space-between;
+  padding: 0 4ch;
 }
 
-.nav-list {
+.system-nav-list {
   color: #000;
   background-color: #fff;
   list-style: none;
@@ -27,4 +38,131 @@ body {
   display: flex;
   justify-content: space-between;
   min-width: 60%;
+}
+
+.nav-list-item {
+  color: var(--black);
+}
+
+.main {
+  padding: 2.5ch;
+  overflow-y: auto;
+  z-index: -1;
+}
+
+.title {
+  background-color: var(--white);
+  color: var(--blue);
+  text-align: center;
+}
+//////////////////
+// Minimize Button
+//////////////////
+.main-content {
+  position: relative;
+  box-shadow: 1rem 1rem 0 black;
+  background-color: var(--blue);
+}
+.minimize-button {
+  font-size: .75rem;
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  color: var(--white);
+  background-color: var(--black);
+  position: absolute;
+  border: 1px solid var(--white);
+  box-shadow: 0 0 0 1px #000;
+}
+
+.minimize-button:hover {
+  background-color: var(--gray);
+  cursor: pointer;
+}
+
+.minimize-button::after {
+  content: '';
+  display: inline-block;
+  height: 2px;
+  width: calc(100% - 4px);
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-color: var(--white);
+}
+
+.minimize-button:hover::after {
+  background-color: var(--white)
+}
+
+.minimize-button:active {
+  transform: translate(1px, 1px);
+  background-color: var(--white);
+}
+
+.minimize-button:active::after {
+  background-color: var(--black);
+}
+
+// Layout
+.section-container {
+  display: flex;
+  gap: 1ch;
+  border: 2px solid var(--white);
+}
+
+// MENU
+.section  {
+  height: 15rem;
+  margin: 2ch 0;
+  overflow-y: scroll;
+  border: 2px solid var(--white);
+}
+
+.section.menu {
+  flex: 4;
+  margin-left: 3ch;
+}
+.section.description {
+  flex: 8;
+  margin-right: 3ch;
+  align-self: stretch;
+}
+
+.section-title {
+  background-color: var(--white);
+  color: var(--blue);
+  text-align: center;
+}
+
+.menu-group {
+  margin: 2ch 3ch;
+}
+.menu-title {
+  color: yellow;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: var(--black);
+  margin: 0 -1.5ch;
+}
+
+.menu-command:hover {
+  color: var(--gray);
+  background-color: var(--white);
+  cursor: pointer;
+  padding: 0 -1.5ch;
+}
+.menu-command:active {
+  transform: translate(1px, 1px);
+}
+
+.description-group {
+  margin: 2ch;
+}
+
+.description-title {
+  text-transform: uppercase;
+  color: yellow;
+  margin-bottom: 2ch;
 }
