@@ -14,7 +14,7 @@
 }
 
 .main {
-  height: 45ch;
+  height: 40rem;
   background: var(--gray);
 }
 
@@ -62,7 +62,9 @@
   position: relative;
   box-shadow: 1rem 1rem 0 black;
   background-color: var(--blue);
+  margin-right: 1ch;
 }
+
 .minimize-button {
   font-size: .75rem;
   display: block;
@@ -110,11 +112,12 @@
   display: flex;
   gap: 1ch;
   border: 2px solid var(--white);
+  height: 30rem;
 }
 
 // MENU
-.section  {
-  height: 15rem;
+.section {
+  height: 24rem;
   margin: 2ch 0;
   overflow-y: scroll;
   border: 2px solid var(--white);
