@@ -25,6 +25,33 @@ h1, h2, h3, h4, h5, h6, p, li {
   font-weight: normal;
 }
 
-li {
+ul {
   list-style: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.screen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black);
+}
+
+.container {
+  max-width: 80ch;
+  margin: 2ch auto;
+  flex-grow: 1;
+}
+
+.header {
+  background-color: var(--white);
+  padding: 0 4ch;
 }

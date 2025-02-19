@@ -12,55 +12,57 @@
 <div class="screen">
   <section class="container">
     <header class="header">
-      <nav class="system-nav-header">
+      <nav class="system-nav">
         <ul class="system-nav-list">
-          <li class="nav-list-item">Menu</li>
-          <li class="nav-list-item">Configuration</li>
-          <li class="nav-list-item">Advise</li>
-          <li class="nav-list-item">Quit!</li>
+          <li class="system-nav-item">Menu</li>
+          <li class="system-nav-item">Configuration</li>
+          <li class="system-nav-item">Advise</li>
+          <li class="system-nav-item">Quit!</li>
         </ul>
-        <span>F1=Help</span>
+        <span class="help-text">F1=Help</span>
       </nav>
     </header>
     <main class="main">
       <section class="main-content">
-        <span class="minimize-button"></span>
+        <button class="minimize-button"></button>
         <h1 class="title">The Norton Utilities 6.0</h1>
-        <div class="section-container">
-          <section class="section menu">
-            <h2 class="section-title">
-              <span class="section-title-text">Commands</span>
-            </h2>
+        <div class="window-content">
+          <section class="menu-section">
+            <h2 class="section-title">Commands</h2>
             <article class="menu-group">
-              <h3 class="menu-title">Recovery</h3>
-              <ul class="menu-commands">
-                <li class="menu-command">Disk Doctor</li>
-                <li class="menu-command">Disk Editor</li>
-                <li class="menu-command">Disk Tools</li>
-                <li class="menu-command">Erase Protect</li>
-                <li class="menu-command">File Fix</li>
-                <li class="menu-command">Image</li>
-                <li class="menu-command">UnErase</li>
-                <li class="menu-command">UnFormat</li>
+              <h3 class="menu-group-title">Recovery</h3>
+              <ul class="menu-list">
+                <li class="menu-item">Disk Doctor</li>
+                <li class="menu-item">Disk Editor</li>
+                <li class="menu-item">Disk Tools</li>
+                <li class="menu-item">Erase Protect</li>
+                <li class="menu-item">File Fix</li>
+                <li class="menu-item">Image</li>
+                <li class="menu-item">UnErase</li>
+                <li class="menu-item">UnFormat</li>
               </ul>
             </article>
             <article class="menu-group">
-              <h3 class="menu-title">Speed</h3>
-              <ul class="menu-commands">
-                <li class="menu-command">Calibrate</li>
-                <li class="menu-command">Norton Cache</li>
-                <li class="menu-command">Speed Disk</li>
+              <h3 class="menu-group-title">Speed</h3>
+              <ul class="menu-list">
+                <li class="menu-item">Calibrate</li>
+                <li class="menu-item">Norton Cache</li>
+                <li class="menu-item">Speed Disk</li>
               </ul>
             </article>
           </section>
-          <section class="section description">
+          <section class="description-section">
             <h2 class="section-title">Description</h2>
             <article class="description-group">
-              <h3 class="description-title">Recovery</h3>
+              <h3 class="description-group-title">Recovery</h3>
               <p class="description-text">Recover deleted files and repair damaged ones; restore formatted disks; and protect disks against data loss.</p>
             </article>
           </section>
         </div>
+        <form class="search-form">
+          <input class="search-input" type="text" id="search-input" placeholder="................................................................................"/>
+          <label for="search-input"></label>
+        </form>
       </section>
 
     </main>

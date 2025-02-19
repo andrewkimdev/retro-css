@@ -1,53 +1,33 @@
-.screen {
-  width: 100vw;
-  height: 100vh;
+.system-nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background-color: var(--black);
-}
 
-.container {
-  max-width: 80ch;
-  margin: 2ch auto;
-  flex-grow: 1;
+  .system-nav-list {
+    display: flex;
+    gap: 2ch;
+  }
+  .system-nav-item {
+    color: var(--black);
+  }
+  .help-text {
+    color: var(--black);
+  }
 }
 
 .main {
   height: 40rem;
   background: var(--gray);
-}
-
-.header {
-  background-color: #fff;
-}
-
-.system-nav-header {
-  background-color: #fff;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 4ch;
-}
-
-.system-nav-list {
-  color: #000;
-  background-color: #fff;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: space-between;
-  min-width: 60%;
-}
-
-.nav-list-item {
-  color: var(--black);
-}
-
-.main {
   padding: 2.5ch;
   overflow-y: auto;
-  z-index: -1;
+  position: relative;
+}
+
+.main-content {
+  box-shadow: 1.75rem 1.75rem 0 var(--black);
+  background-color: var(--blue);
+  margin-right: 2ch;
+  border: 2px solid var(--white);
 }
 
 .title {
@@ -58,114 +38,115 @@
 //////////////////
 // Minimize Button
 //////////////////
-.main-content {
-  position: relative;
-  box-shadow: 1.75rem 1.75rem 0 black;
-  background-color: var(--blue);
-  margin-right: 1ch;
-}
+
 
 .minimize-button {
   font-size: .75rem;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 1.55rem;
   width: 1.55rem;
   color: var(--white);
   background-color: var(--black);
   position: absolute;
   border: 1px solid var(--white);
-  box-shadow: 0 0 0 1px #000;
-}
+  box-shadow: 0 0 0 1px var(--black);
 
-.minimize-button:hover {
-  background-color: var(--gray);
-  cursor: pointer;
-}
+  &::after {
+    content: '';
+    width: calc(100% - 4px);
+    height: 2px;
+    background-color: var(--white);
+  }
 
-.minimize-button::after {
-  content: '';
-  display: inline-block;
-  height: 2px;
-  width: calc(100% - 4px);
-  position: absolute;
-  left: 2px;
-  top: 50%;
-  transform: translate(0, -50%);
-  background-color: var(--white);
+  &:hover {
+    background-color: var(--gray);
+  }
+  &:active {
+    transform: translate(1px, 1px);
+    background-color: var(--white);
+    &::after {
+      background-color: var(--black);
+    }
+  }
 }
-
-.minimize-button:hover::after {
-  background-color: var(--white)
-}
-
-.minimize-button:active {
-  transform: translate(1px, 1px);
-  background-color: var(--white);
-}
-
-.minimize-button:active::after {
-  background-color: var(--black);
-}
-
 // Layout
-.section-container {
+.window-content {
   display: flex;
   gap: 1ch;
-  border: 2px solid var(--white);
-  height: 30rem;
+  //height: 80%;
+  padding: 1.5rem 2.5rem;
 }
 
 // MENU
-.section {
-  height: 24rem;
-  margin: 2ch 0;
-  overflow-y: scroll;
-  border: 2px solid var(--white);
-}
-
-.section.menu {
-  flex: 4;
-  margin-left: 3ch;
-}
-.section.description {
-  flex: 8;
-  margin-right: 3ch;
-  align-self: stretch;
-}
-
 .section-title {
   background-color: var(--white);
   color: var(--blue);
   text-align: center;
 }
 
-.menu-group {
-  margin: 2ch 3ch;
-}
-.menu-title {
-  color: yellow;
-  text-transform: uppercase;
-  text-align: center;
-  background-color: var(--black);
-  margin: 0 -1.5ch;
+.menu-section, .description-section {
+  overflow: auto;
+  border: 2px solid var(--white);
 }
 
-.menu-command:hover {
-  color: var(--gray);
-  background-color: var(--white);
-  cursor: pointer;
-  padding: 0 -1.5ch;
+.menu-selection {
+  flex: 4;
 }
-.menu-command:active {
-  transform: translate(1px, 1px);
+
+.description-section {
+  flex: 8;
+}
+
+.menu-group {
+  margin: 2ch;
+}
+
+.menu-group-title {
+  color: yellow;
+  text-transform: uppercase;
+  background-color: var(--black);
+  margin: 0 -2ch;
+  padding: 0 2ch;
+}
+
+.menu-item {
+  &:hover {
+    color: var(--gray);
+    background-color: var(--white);
+    cursor: pointer;
+  }
+  &:active {
+    transform: translate(1px, 1px);
+  }
 }
 
 .description-group {
   margin: 2ch;
 }
 
-.description-title {
+.description-group-title {
   text-transform: uppercase;
   color: yellow;
-  margin-bottom: 2ch;
+  margin-bottom: 1ch;
+}
+
+.search-form {
+  //height: 3rem;
+  display: flex;
+  //align-items: center;
+  //margin: 0 3rem 2rem;
+  //margin-bottom: 1.5rem;
+}
+
+.search-input {
+  content: '.';
+  background-color: var(--black);
+  color: var(--white);
+  flex: 1;
+  font-size: var(--font-size);
+  padding: .5rem;
+  margin: 0 4rem 2rem;
+  //width: 85%;
 }
